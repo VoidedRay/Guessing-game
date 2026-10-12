@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Player Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="leaf-container">
+        <div class="leaf">🍂</div>
+        <div class="leaf">🍁</div>
+        <div class="leaf">🌾</div>
+        <div class="leaf">🍂</div>
+        <div class="leaf">🍁</div>
+    </div>
+
+    <div class="card">
+        <h2>1 Player Mode</h2>
+        <p class="subtitle">Guess the computer's secret number (1–100)</p>
+
+        <div class="timer-box" id="timerDisplay">
+            <span>⏱️ Time Remaining:</span>
+            <span id="timeLeft">30s</span>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="guessInput" placeholder="Enter your guess">
+            <button class="btn" id="submitBtn" onclick="makeSinglePlayerGuess()">Submit Guess</button>
+        </div>
+
+        <p id="feedback" class="feedback"></p>
+        <a href="index.html" class="btn btn-secondary">← Main Menu</a>
+    </div>
+
+    <script src="guessingGame.js"></script>
+    <script>
+        initSinglePlayer();
+    </script>
+</body>
+</html>
