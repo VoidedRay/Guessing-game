@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="Lower" onclick="guess(0)">
+<p id="guess">50</p>
+    <input type="button" value="Higher" onclick="guess(1)">
+    <input type="button" value="You guessed it!" onclick="guess(2)">
+<script>
+    var highValue = 100;
+    var lowValue = 0;
+function guess(hl){
+    const target = document.getElementById("guess");
+  
+    let guess = parseInt(target.innerHTML);
+    if (hl == 1){ 
+        lowValue = (guess);
+      console.log(lowValue);
+
+    }
+    else if (hl == 0){
+        highValue = (guess);
+        console.log(highValue);
+    }
+    else if (hl == 2){
+         window.location.href = "suck it.html";
+    }
+    guess = Math.floor((highValue + lowValue)/2);
+    target.innerHTML = guess;
+    if (guess == 67){
+        alert("You bum")
+    }
+    if (guess ==69){
+        alert("I know what you are")
+    }
+    
+    
+}
+
+
+</script>
+
+</body>
+</html>
